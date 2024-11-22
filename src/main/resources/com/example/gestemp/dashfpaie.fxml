@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="1370.0" style="-fx-background-color: 3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestemp.DashfpaieController">
+   <children>
+      <Label layoutX="53.0" layoutY="206.0" prefHeight="17.0" prefWidth="87.0" />
+      <AnchorPane layoutX="12.0" layoutY="7.0" prefHeight="295.0" prefWidth="392.0" style="-fx-border-color: #ffffff; -fx-background-color: #ffffff;" AnchorPane.bottomAnchor="398.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <Label layoutX="48.0" layoutY="80.0" prefHeight="24.0" prefWidth="68.0" text="Matricule" />
+            <TextField fx:id="idmat" layoutX="198.0" layoutY="80.0" promptText="Enter Matricule" />
+            <Label layoutX="48.0" layoutY="121.0" prefHeight="24.0" prefWidth="116.0" text="Nom&amp;Prenom" />
+            <TextField fx:id="idnomprenom" layoutX="198.0" layoutY="121.0" promptText="Enter Nom&amp;Prenom" />
+            <Label layoutX="48.0" layoutY="166.0" prefHeight="24.0" prefWidth="132.0" text="N° de Securité Sociale " />
+            <TextField fx:id="idnsecu" layoutX="198.0" layoutY="166.0" promptText="Enter N°securitéSociale" />
+            <Label layoutX="48.0" layoutY="203.0" prefHeight="24.0" prefWidth="106.0" text="Situation Conjugale" />
+            <Label layoutX="53.0" layoutY="238.0" prefHeight="24.0" prefWidth="106.0" text="N° d'enfants" />
+            <TextField fx:id="idnbenfants" layoutX="199.0" layoutY="238.0" promptText="Enter N°enfants" />
+            <ComboBox fx:id="idsituation" layoutX="199.0" layoutY="203.0" prefWidth="150.0" promptText="Enter situation" />
+            <Label layoutX="23.0" layoutY="20.0" prefHeight="41.0" prefWidth="220.0" text="Identité du salarié">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnajout" layoutX="170.0" layoutY="595.0" mnemonicParsing="false" onAction="#ajout" prefHeight="25.0" prefWidth="185.0" text="➕ Ajouter " />
+      <AnchorPane layoutX="386.0" layoutY="7.0" prefHeight="295.0" prefWidth="431.0" style="-fx-border-color: #ffffff; -fx-background-color: #ffffff;" AnchorPane.topAnchor="7.0">
+         <children>
+            <Label layoutX="48.0" layoutY="80.0" prefHeight="24.0" prefWidth="106.0" text="Date d'embauche" />
+            <Label layoutX="48.0" layoutY="121.0" prefHeight="24.0" prefWidth="116.0" text="Poste" />
+            <TextField fx:id="idposte" layoutX="198.0" layoutY="126.0" prefHeight="25.0" prefWidth="170.0" promptText="Enter Poste" />
+            <Label layoutX="48.0" layoutY="166.0" prefHeight="24.0" prefWidth="132.0" text="Echellon" />
+            <Label layoutX="20.0" layoutY="14.0" prefHeight="41.0" prefWidth="320.0" text="Réferences du poste occupé">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="35.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="iddateemb" layoutX="198.0" layoutY="80.0" prefHeight="25.0" prefWidth="170.0" promptText="Enter date d'embauche" />
+            <ComboBox fx:id="idechellon" layoutX="198.0" layoutY="166.0" prefHeight="25.0" prefWidth="170.0" promptText="Enter echellon" />
+            <Label layoutX="48.0" layoutY="208.0" prefHeight="24.0" prefWidth="132.0" text="Contrat" />
+            <TextField fx:id="idcont" layoutX="198.0" layoutY="208.0" prefHeight="25.0" prefWidth="170.0" promptText="Enter contrat" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="386.0" layoutY="302.0" prefHeight="313.0" prefWidth="431.0" style="-fx-border-color: #ffffff; -fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="38.0" layoutY="82.0" prefHeight="24.0" prefWidth="132.0" text="Heure de travail mensuel" />
+            <TextField fx:id="idsalaire" layoutX="259.0" layoutY="126.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter Salaire brute" />
+            <Label layoutX="39.0" layoutY="166.0" prefHeight="24.0" prefWidth="208.0" text="Total de cotisations et contributions" />
+            <Label layoutX="20.0" layoutY="14.0" prefHeight="41.0" prefWidth="320.0" text="Les rubliques de la fiche de paie">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="208.0" prefHeight="24.0" prefWidth="132.0" text="Net Fiscal" />
+            <TextField fx:id="idnetfiscal" layoutX="259.0" layoutY="208.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter Net fiscal" />
+            <Label layoutX="38.0" layoutY="130.0" prefHeight="17.0" prefWidth="87.0" text="Salaire Brute" />
+            <TextField fx:id="idnbheures" layoutX="259.0" layoutY="82.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter h_detravail mensuel" />
+            <TextField fx:id="idcotisation" layoutX="259.0" layoutY="166.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter total c&amp;c" />
+            <Label layoutX="48.0" layoutY="241.0" prefHeight="24.0" prefWidth="132.0" text="Type Assurance" />
+            <TextField fx:id="idassurance" layoutX="259.0" layoutY="241.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter assurance" />
+            <Label layoutX="48.0" layoutY="277.0" prefHeight="24.0" prefWidth="132.0" text="Net à Payer" />
+            <TextField fx:id="idnetàpayer" layoutX="259.0" layoutY="276.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter Net à payer" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnmodifier" layoutX="170.0" layoutY="557.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="185.0" text="⚠ Modifier" />
+      <Button fx:id="btngenerate" layoutX="169.0" layoutY="632.0" mnemonicParsing="false" onAction="#generate" prefHeight="25.0" prefWidth="185.0" text=" 📄 Générer PDF" textFill="#020103" />
+      <TextField fx:id="tfsearch" layoutX="1067.0" layoutY="148.0" prefHeight="25.0" prefWidth="179.0" promptText="Enter  Matricule" />
+      <Button fx:id="rechercheid" layoutX="1246.0" layoutY="148.0" mnemonicParsing="false" onAction="#btnrecherche" text="Rechercher" />
+      <TableView fx:id="tablesalaire" layoutX="817.0" layoutY="199.0" prefHeight="492.0" prefWidth="543.0">
+        <columns>
+          <TableColumn fx:id="colmat" prefWidth="75.0" text="matricule" />
+          <TableColumn fx:id="colnomprenom" prefWidth="75.0" text="nomprenom" />
+            <TableColumn fx:id="colposte" prefWidth="75.0" text="poste" />
+            <TableColumn fx:id="colechellon" prefWidth="75.0" text="echelon" />
+            <TableColumn fx:id="colcontrat" prefWidth="75.0" text="contrat" />
+            <TableColumn fx:id="colsalairebrute" prefWidth="82.0" text="salairebrute" />
+            <TableColumn fx:id="colnetàpayer" prefWidth="64.0" text="netàpayer" />
+        </columns>
+      </TableView>
+      <Button fx:id="returnid" layoutX="24.0" layoutY="646.0" mnemonicParsing="false" onAction="#btnreturn" prefHeight="37.0" prefWidth="46.0" text="↩">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="5.0" layoutY="302.0" prefHeight="223.0" prefWidth="401.0" style="-fx-border-color: #ffffff; -fx-background-color: #ffffff;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="973.0" AnchorPane.topAnchor="302.0">
+         <children>
+            <Label layoutX="20.0" layoutY="14.0" prefHeight="41.0" prefWidth="320.0" text="Réfrénces du bulletin du salarié">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="61.0" prefHeight="32.0" prefWidth="220.0" text="Periode couverte par bulletin de salaire" />
+            <Label layoutX="88.0" layoutY="101.0" text="Date Debut  " />
+            <Label layoutX="88.0" layoutY="135.0" prefHeight="17.0" prefWidth="68.0" text="Date Fin" />
+            <DatePicker fx:id="iddebut" layoutX="201.0" layoutY="97.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter date debut" />
+            <DatePicker fx:id="idfin" layoutX="201.0" layoutY="131.0" prefHeight="25.0" prefWidth="162.0" promptText="Enter date fin" />
+         </children>
+      </AnchorPane>
+      <TextField layoutX="1027.0" layoutY="148.0" prefHeight="25.0" prefWidth="29.0" text="🔎" />
+      <ImageView fitHeight="150.0" fitWidth="162.0" layoutX="823.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imag/logo2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

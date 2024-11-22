@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestemp.DashemployeController">
+   <children>
+      <AnchorPane layoutY="-8.0" prefHeight="700.0" prefWidth="547.0" style="-fx-background-color: linear-gradient(to right top, #29292c, #343336, #3e3e40, #4a4a4a, #555555);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="ajout_id" layoutX="198.0" layoutY="516.0" mnemonicParsing="false" onAction="#btnajouter" prefHeight="37.0" prefWidth="277.0" text="➕   Ajouter" />
+            <Button fx:id="modifier_id" layoutX="198.0" layoutY="566.0" mnemonicParsing="false" onAction="#btnmodifier" prefHeight="37.0" prefWidth="277.0" text="⚠  Modifier" />
+            <Button fx:id="supp_id" layoutX="198.0" layoutY="624.0" mnemonicParsing="false" onAction="#btnsupprimer" prefHeight="37.0" prefWidth="277.0" text="   ✖   Supprimer" />
+            <Label layoutX="213.0" layoutY="161.0" prefHeight="17.0" prefWidth="28.0" text="Id" textFill="#fff4f4">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </Label>
+            <Label layoutX="213.0" layoutY="199.0" prefHeight="17.0" prefWidth="46.0" text="Nom" textFill="#fff4f4">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </Label>
+            <Label layoutX="213.0" layoutY="240.0" prefHeight="17.0" prefWidth="46.0" text="Prenom" textFill="#fff4f4">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </Label>
+            <Label layoutX="209.0" layoutY="281.0" prefHeight="17.0" prefWidth="89.0" text="NomDep" textFill="#fff4f4">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </Label>
+            <Label layoutX="215.0" layoutY="317.0" prefHeight="17.0" prefWidth="89.0" text="Sexe" textFill="#fff4f4">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </Label>
+            <Label layoutX="192.0" layoutY="353.0" prefHeight="17.0" prefWidth="89.0" text="Date Naissance" textFill="#fff4f4">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </Label>
+            <Label layoutX="215.0" layoutY="393.0" prefHeight="17.0" prefWidth="89.0" text="Poste" textFill="#fff4f4">
+               <padding>
+                  <Insets left="2.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="id_id" alignment="CENTER" layoutX="280.0" layoutY="157.0" promptText="Enter id" />
+            <TextField fx:id="nom_id" alignment="CENTER" layoutX="280.0" layoutY="195.0" promptText="Entrer nom" />
+            <TextField fx:id="prenom_id" alignment="CENTER" layoutX="280.0" layoutY="236.0" promptText="Entrer prenom" />
+            <TextField fx:id="dep_id" alignment="CENTER" layoutX="280.0" layoutY="277.0" promptText="entrer nom Dep" />
+            <TextField fx:id="contrat_id" alignment="CENTER" layoutX="280.0" layoutY="389.0" promptText="enter poste" />
+            <ComboBox fx:id="comboBox_id" layoutX="280.0" layoutY="313.0" onAction="#selectsexe" prefWidth="150.0" promptText="Sélectionner sexe" />
+            <DatePicker fx:id="date_id" layoutX="280.0" layoutY="349.0" prefHeight="25.0" prefWidth="150.0" promptText="sélectionner date" />
+            <Label layoutX="220.0" layoutY="434.0" text="Adresse" textFill="#fff4f4" />
+            <TextField fx:id="adresse_id" layoutX="280.0" layoutY="430.0" promptText="Enter adresse" />
+            <Button fx:id="returnid" layoutX="14.0" layoutY="636.0" mnemonicParsing="false" onAction="#btnreturn" prefHeight="37.0" prefWidth="46.0" text="↩">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="163.0" fitWidth="159.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imag/logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableemploye" layoutX="545.0" layoutY="107.0" prefHeight="583.0" prefWidth="826.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="74.0" text="id" />
+          <TableColumn fx:id="colnom" prefWidth="90.0" text="nom" />
+            <TableColumn fx:id="colprenom" prefWidth="84.0" text="prenom" />
+            <TableColumn fx:id="colsexe" prefWidth="87.0" text="sexe" />
+            <TableColumn fx:id="coldaten" prefWidth="138.0" text="date_Naiss" />
+            <TableColumn fx:id="colcontrat" prefWidth="121.0" text="poste" />
+            <TableColumn fx:id="coldep" prefWidth="111.0" text="nomDep" />
+            <TableColumn fx:id="coladr" prefWidth="120.0" text="adresse" />
+        </columns>
+      </TableView>
+      <Label layoutX="850.0" layoutY="50.0" prefHeight="25.0" prefWidth="28.0" text="🔎" />
+      <TextField fx:id="tfsearch" layoutX="888.0" layoutY="50.0" prefHeight="25.0" prefWidth="179.0" promptText="Enter  ID" />
+      <Button fx:id="rechercheid" layoutX="1067.0" layoutY="50.0" mnemonicParsing="false" onAction="#btnrecherche" text="Rechercher" />
+   </children>
+</AnchorPane>

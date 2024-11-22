@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="396.0" prefWidth="559.0" style="-fx-background-color: linear-gradient(to right top, #7f6d7e, #635462, #483d47, #2f272e, #181217);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestemp.dashController">
+   <children>
+      <Label fx:id="bienvenuid" alignment="CENTER" layoutX="250.0" layoutY="21.0" prefHeight="87.0" prefWidth="290.0" textAlignment="JUSTIFY" textFill="#170d3c">
+         <font>
+            <Font name="Bodoni MT Black" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="empid" layoutX="271.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnemployeaction" prefHeight="46.0" prefWidth="248.0" style="-fx-background-color: #65b81; -fx-border-color: #65b181;" text="Gestion Employés" textFill="#54274cf0">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="congid" layoutX="271.0" layoutY="164.0" mnemonicParsing="false" onAction="#btncongeaction" prefHeight="46.0" prefWidth="248.0" style="-fx-background-color: #65b81; -fx-border-color: #65b181;" text="Gestion Congés" textFill="#54274c">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="paieid" layoutX="271.0" layoutY="241.0" mnemonicParsing="false" onAction="#btnpaieaction" prefHeight="46.0" prefWidth="248.0" style="-fx-background-color: #65b81; -fx-border-color: #65b181;" text="Gestion Fiche de paie" textFill="#54274c">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="167.0" fitWidth="183.0" layoutX="62.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imag/logo2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
